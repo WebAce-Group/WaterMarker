@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="choosePictures.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Disable</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="choosePictures.Location" type="System.Drawing.Point, System.Drawing">
     <value>160, 166</value>
@@ -142,6 +146,9 @@
   </data>
   <data name="&gt;&gt;choosePictures.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="watermark.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Disable</value>
   </data>
   <data name="watermark.Location" type="System.Drawing.Point, System.Drawing">
     <value>160, 220</value>
@@ -169,6 +176,9 @@
   </data>
   <data name="PictureCounter.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="PictureCounter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Disable</value>
   </data>
   <data name="PictureCounter.Location" type="System.Drawing.Point, System.Drawing">
     <value>303, 171</value>
@@ -200,6 +210,9 @@
   <data name="WaterMarkLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="WaterMarkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Disable</value>
+  </data>
   <data name="WaterMarkLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>303, 225</value>
   </data>
@@ -227,6 +240,9 @@
   <data name="&gt;&gt;WaterMarkLabel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="ApplyWaterMark.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Disable</value>
+  </data>
   <data name="ApplyWaterMark.Location" type="System.Drawing.Point, System.Drawing">
     <value>160, 276</value>
   </data>
@@ -250,6 +266,9 @@
   </data>
   <data name="&gt;&gt;ApplyWaterMark.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="Reset.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Disable</value>
   </data>
   <data name="Reset.Location" type="System.Drawing.Point, System.Drawing">
     <value>194, 328</value>
@@ -314,7 +333,6 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
