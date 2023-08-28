@@ -41,63 +41,41 @@
             // choosePictures
             // 
             this.choosePictures.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.choosePictures.Location = new System.Drawing.Point(98, 80);
+            resources.ApplyResources(this.choosePictures, "choosePictures");
             this.choosePictures.Name = "choosePictures";
-            this.choosePictures.Size = new System.Drawing.Size(137, 23);
-            this.choosePictures.TabIndex = 0;
-            this.choosePictures.Text = "Wybierz zdjęcia";
             this.choosePictures.UseVisualStyleBackColor = true;
             this.choosePictures.Click += new System.EventHandler(this.ChoosePictures_Click);
             // 
             // watermark
             // 
             this.watermark.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.watermark.Location = new System.Drawing.Point(98, 134);
+            resources.ApplyResources(this.watermark, "watermark");
             this.watermark.Name = "watermark";
-            this.watermark.Size = new System.Drawing.Size(137, 23);
-            this.watermark.TabIndex = 1;
-            this.watermark.Text = "Wybierz znak wodny";
             this.watermark.UseVisualStyleBackColor = true;
             this.watermark.Click += new System.EventHandler(this.Watermark_Click);
             // 
             // PictureCounter
             // 
-            this.PictureCounter.AutoSize = true;
-            this.PictureCounter.Location = new System.Drawing.Point(241, 85);
+            resources.ApplyResources(this.PictureCounter, "PictureCounter");
             this.PictureCounter.Name = "PictureCounter";
-            this.PictureCounter.Size = new System.Drawing.Size(89, 13);
-            this.PictureCounter.TabIndex = 2;
-            this.PictureCounter.Text = "Wybrano plików: ";
-            this.PictureCounter.Visible = false;
             // 
             // WaterMarkLabel
             // 
-            this.WaterMarkLabel.AutoSize = true;
-            this.WaterMarkLabel.Location = new System.Drawing.Point(241, 139);
+            resources.ApplyResources(this.WaterMarkLabel, "WaterMarkLabel");
             this.WaterMarkLabel.Name = "WaterMarkLabel";
-            this.WaterMarkLabel.Size = new System.Drawing.Size(68, 13);
-            this.WaterMarkLabel.TabIndex = 3;
-            this.WaterMarkLabel.Text = "Nazwa pliku:";
-            this.WaterMarkLabel.Visible = false;
             // 
             // ApplyWaterMark
             // 
             this.ApplyWaterMark.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ApplyWaterMark.Location = new System.Drawing.Point(98, 190);
+            resources.ApplyResources(this.ApplyWaterMark, "ApplyWaterMark");
             this.ApplyWaterMark.Name = "ApplyWaterMark";
-            this.ApplyWaterMark.Size = new System.Drawing.Size(137, 23);
-            this.ApplyWaterMark.TabIndex = 4;
-            this.ApplyWaterMark.Text = "Nałóż znak wodny";
             this.ApplyWaterMark.UseVisualStyleBackColor = true;
             this.ApplyWaterMark.Click += new System.EventHandler(this.ApplyWaterMark_Click);
             // 
             // Reset
             // 
-            this.Reset.Location = new System.Drawing.Point(132, 242);
+            resources.ApplyResources(this.Reset, "Reset");
             this.Reset.Name = "Reset";
-            this.Reset.Size = new System.Drawing.Size(75, 23);
-            this.Reset.TabIndex = 6;
-            this.Reset.Text = "Resetuj";
             this.Reset.UseVisualStyleBackColor = true;
             this.Reset.Click += new System.EventHandler(this.Reset_Click);
             // 
@@ -107,29 +85,24 @@
             this.ProgressBar.BarColor1 = System.Drawing.Color.Orange;
             this.ProgressBar.BarColor2 = System.Drawing.Color.Orange;
             this.ProgressBar.BarWidth = 14F;
-            this.ProgressBar.Font = new System.Drawing.Font("Segoe UI", 15F);
+            resources.ApplyResources(this.ProgressBar, "ProgressBar");
             this.ProgressBar.ForeColor = System.Drawing.Color.DimGray;
             this.ProgressBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.ProgressBar.LineColor = System.Drawing.Color.DimGray;
             this.ProgressBar.LineWidth = 1;
-            this.ProgressBar.Location = new System.Drawing.Point(471, 85);
             this.ProgressBar.Maximum = ((long)(100));
-            this.ProgressBar.MinimumSize = new System.Drawing.Size(100, 100);
             this.ProgressBar.Name = "ProgressBar";
             this.ProgressBar.ProgressShape = WaterMarker.CircularProgressBar._ProgressShape.Flat;
-            this.ProgressBar.Size = new System.Drawing.Size(180, 180);
-            this.ProgressBar.TabIndex = 5;
-            this.ProgressBar.Text = "69";
             this.ProgressBar.TextMode = WaterMarker.CircularProgressBar._TextMode.Percentage;
             this.ProgressBar.Value = ((long)(69));
-            this.ProgressBar.Visible = false;
             this.ProgressBar.Click += new System.EventHandler(this.ProgressBar_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 357);
+            this.BackgroundImage = global::WaterMarker.Properties.Resources.WaterMarkerBg;
+            this.ControlBox = false;
             this.Controls.Add(this.Reset);
             this.Controls.Add(this.ProgressBar);
             this.Controls.Add(this.ApplyWaterMark);
@@ -137,12 +110,11 @@
             this.Controls.Add(this.PictureCounter);
             this.Controls.Add(this.watermark);
             this.Controls.Add(this.choosePictures);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
-            this.Text = "WaterMarker";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
