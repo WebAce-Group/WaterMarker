@@ -33,10 +33,13 @@
             this.PictureCounter = new System.Windows.Forms.Label();
             this.WaterMarkLabel = new System.Windows.Forms.Label();
             this.ApplyWaterMark = new System.Windows.Forms.Button();
+            this.Reset = new System.Windows.Forms.Button();
+            this.ProgressBar = new WaterMarker.CircularProgressBar();
             this.SuspendLayout();
             // 
             // choosePictures
             // 
+            this.choosePictures.Cursor = System.Windows.Forms.Cursors.Hand;
             this.choosePictures.Location = new System.Drawing.Point(98, 80);
             this.choosePictures.Name = "choosePictures";
             this.choosePictures.Size = new System.Drawing.Size(137, 23);
@@ -47,7 +50,8 @@
             // 
             // watermark
             // 
-            this.watermark.Location = new System.Drawing.Point(98, 152);
+            this.watermark.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.watermark.Location = new System.Drawing.Point(98, 134);
             this.watermark.Name = "watermark";
             this.watermark.Size = new System.Drawing.Size(137, 23);
             this.watermark.TabIndex = 1;
@@ -68,7 +72,7 @@
             // WaterMarkLabel
             // 
             this.WaterMarkLabel.AutoSize = true;
-            this.WaterMarkLabel.Location = new System.Drawing.Point(241, 157);
+            this.WaterMarkLabel.Location = new System.Drawing.Point(241, 139);
             this.WaterMarkLabel.Name = "WaterMarkLabel";
             this.WaterMarkLabel.Size = new System.Drawing.Size(68, 13);
             this.WaterMarkLabel.TabIndex = 3;
@@ -77,7 +81,8 @@
             // 
             // ApplyWaterMark
             // 
-            this.ApplyWaterMark.Location = new System.Drawing.Point(98, 230);
+            this.ApplyWaterMark.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ApplyWaterMark.Location = new System.Drawing.Point(98, 190);
             this.ApplyWaterMark.Name = "ApplyWaterMark";
             this.ApplyWaterMark.Size = new System.Drawing.Size(137, 23);
             this.ApplyWaterMark.TabIndex = 4;
@@ -85,18 +90,56 @@
             this.ApplyWaterMark.UseVisualStyleBackColor = true;
             this.ApplyWaterMark.Click += new System.EventHandler(this.ApplyWaterMark_Click);
             // 
+            // Reset
+            // 
+            this.Reset.Location = new System.Drawing.Point(132, 242);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(75, 23);
+            this.Reset.TabIndex = 6;
+            this.Reset.Text = "Resetuj";
+            this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
+            // 
+            // ProgressBar
+            // 
+            this.ProgressBar.BackColor = System.Drawing.SystemColors.Control;
+            this.ProgressBar.BarColor1 = System.Drawing.Color.Orange;
+            this.ProgressBar.BarColor2 = System.Drawing.Color.Orange;
+            this.ProgressBar.BarWidth = 14F;
+            this.ProgressBar.Font = new System.Drawing.Font("Segoe UI", 15F);
+            this.ProgressBar.ForeColor = System.Drawing.Color.DimGray;
+            this.ProgressBar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.ProgressBar.LineColor = System.Drawing.Color.DimGray;
+            this.ProgressBar.LineWidth = 1;
+            this.ProgressBar.Location = new System.Drawing.Point(471, 85);
+            this.ProgressBar.Maximum = ((long)(100));
+            this.ProgressBar.MinimumSize = new System.Drawing.Size(100, 100);
+            this.ProgressBar.Name = "ProgressBar";
+            this.ProgressBar.ProgressShape = WaterMarker.CircularProgressBar._ProgressShape.Flat;
+            this.ProgressBar.Size = new System.Drawing.Size(180, 180);
+            this.ProgressBar.TabIndex = 5;
+            this.ProgressBar.Text = "69";
+            this.ProgressBar.TextMode = WaterMarker.CircularProgressBar._TextMode.Percentage;
+            this.ProgressBar.Value = ((long)(69));
+            this.ProgressBar.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(735, 357);
+            this.Controls.Add(this.Reset);
+            this.Controls.Add(this.ProgressBar);
             this.Controls.Add(this.ApplyWaterMark);
             this.Controls.Add(this.WaterMarkLabel);
             this.Controls.Add(this.PictureCounter);
             this.Controls.Add(this.watermark);
             this.Controls.Add(this.choosePictures);
+            this.ImeMode = System.Windows.Forms.ImeMode.Disable;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "WaterMarker";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,6 +152,8 @@
         private System.Windows.Forms.Label PictureCounter;
         private System.Windows.Forms.Label WaterMarkLabel;
         private System.Windows.Forms.Button ApplyWaterMark;
+        private CircularProgressBar ProgressBar;
+        private System.Windows.Forms.Button Reset;
     }
 }
 
