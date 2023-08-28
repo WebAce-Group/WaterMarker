@@ -123,6 +123,7 @@
             this.ProgressBar.TextMode = WaterMarker.CircularProgressBar._TextMode.Percentage;
             this.ProgressBar.Value = ((long)(69));
             this.ProgressBar.Visible = false;
+            this.ProgressBar.Click += new System.EventHandler(this.ProgressBar_Click);
             // 
             // MainForm
             // 
@@ -142,6 +143,7 @@
             this.MinimizeBox = false;
             this.Name = "MainForm";
             this.Text = "WaterMarker";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
