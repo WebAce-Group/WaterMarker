@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.choosePictures = new System.Windows.Forms.Button();
             this.watermark = new System.Windows.Forms.Button();
             this.PictureCounter = new System.Windows.Forms.Label();
@@ -135,6 +136,7 @@
             this.Controls.Add(this.PictureCounter);
             this.Controls.Add(this.watermark);
             this.Controls.Add(this.choosePictures);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

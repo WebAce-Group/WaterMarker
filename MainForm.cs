@@ -9,12 +9,14 @@ namespace WaterMarker
 {
     public partial class MainForm : Form
     {
-        private Image _waterMarkImage;
+        private string _waterMarkImage;
+
+        private Image _waterMarkImageDisposal;
 
         private readonly string _outputFolderPath =
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "WaterMarker");
 
-        private readonly List<Image> _chosenPictures = new List<Image>();
+        private readonly List<string> _chosenPictures = new List<string>();
 
         public MainForm()
         {
@@ -32,7 +34,7 @@ namespace WaterMarker
 
                 foreach (var fileName in openFileDialog.FileNames)
                 {
-                    _chosenPictures.Add(Image.FromFile(fileName));
+                    _chosenPictures.Add(fileName);
                 }
 
                 PictureCounter.Text = $@"Wybrano obrazków: {_chosenPictures.Count}";
@@ -48,7 +50,7 @@ namespace WaterMarker
 
                 if (openFileDialog.ShowDialog() != DialogResult.OK) return;
 
-                _waterMarkImage = Image.FromFile(openFileDialog.FileName);
+                _waterMarkImage = openFileDialog.FileName;
                 WaterMarkLabel.Text = $@"Wybrany znak wodny: {Path.GetFileName(openFileDialog.FileName)}";
                 WaterMarkLabel.Visible = true;
             }
@@ -63,7 +65,7 @@ namespace WaterMarker
                 return;
             }
 
-            var croppedWaterMark = CropTransparentImage(_waterMarkImage);
+            var croppedWaterMark = CropTransparentImage(Image.FromFile(_waterMarkImage));
             if (croppedWaterMark == null)
             {
                 MessageBox.Show(@"Znak wodny nie może być przezroczysty!", @"Błąd", MessageBoxButtons.OK,
@@ -71,12 +73,12 @@ namespace WaterMarker
                 return;
             }
 
-            _waterMarkImage.Dispose();
-            _waterMarkImage = croppedWaterMark;
+            _waterMarkImageDisposal = croppedWaterMark;
             var waterMarkedImages = ApplyWatermarkToImages(_chosenPictures);
 
             SaveWaterMarkedImages(waterMarkedImages);
 
+            croppedWaterMark.Dispose();
             waterMarkedImages.ForEach(x => x.Dispose());
         }
 
@@ -103,22 +105,23 @@ namespace WaterMarker
             return null;
         }
 
-        private Image ApplyWm(Image original)
+        private Image ApplyWm(string original)
         {
-            var bmp = new Bitmap(original);
-            var xPos = (bmp.Width - _waterMarkImage.Width) / 2;
-            var yPos = (bmp.Height - _waterMarkImage.Height) / 2;
+            var originalImage = Image.FromFile(original);
+            var bmp = new Bitmap(originalImage);
+            var xPos = (bmp.Width - _waterMarkImageDisposal.Width) / 2;
+            var yPos = (bmp.Height - _waterMarkImageDisposal.Height) / 2;
 
             using (var g = Graphics.FromImage(bmp))
             {
-                g.DrawImage(_waterMarkImage, new Rectangle(xPos, yPos, _waterMarkImage.Width, _waterMarkImage.Height));
+                g.DrawImage(_waterMarkImageDisposal, new Rectangle(xPos, yPos, _waterMarkImageDisposal.Width, _waterMarkImageDisposal.Height));
             }
 
-            original.Dispose();
+            originalImage.Dispose();
             return bmp;
         }
 
-        private List<Image> ApplyWatermarkToImages(List<Image> images)
+        private List<Image> ApplyWatermarkToImages(List<string> images)
         {
             if (images == null) throw new ArgumentNullException(nameof(images));
             Cursor.Current = Cursors.WaitCursor;
@@ -157,13 +160,9 @@ namespace WaterMarker
 
         private void ResetForm()
         {
-            _waterMarkImage?.Dispose();
+            _waterMarkImageDisposal?.Dispose();
+            _waterMarkImageDisposal = null;
             _waterMarkImage = null;
-            foreach (var image in _chosenPictures)
-            {
-                image.Dispose();
-            }
-
             _chosenPictures.Clear();
             PictureCounter.Visible = false;
             WaterMarkLabel.Visible = false;
