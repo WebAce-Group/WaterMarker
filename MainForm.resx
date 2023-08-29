@@ -118,15 +118,21 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="choosePictures.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="choosePictures.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15pt</value>
+  </data>
   <data name="choosePictures.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Disable</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="choosePictures.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 166</value>
+    <value>141, 131</value>
   </data>
   <data name="choosePictures.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 23</value>
+    <value>249, 46</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="choosePictures.TabIndex" type="System.Int32, mscorlib">
@@ -145,16 +151,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;choosePictures.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
+  </data>
+  <data name="watermark.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="watermark.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15pt</value>
   </data>
   <data name="watermark.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Disable</value>
   </data>
   <data name="watermark.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 220</value>
+    <value>141, 241</value>
   </data>
   <data name="watermark.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 23</value>
+    <value>249, 46</value>
   </data>
   <data name="watermark.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -172,19 +184,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;watermark.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="PictureCounter.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="PictureCounter.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="PictureCounter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Disable</value>
   </data>
   <data name="PictureCounter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 171</value>
+    <value>137, 190</value>
   </data>
   <data name="PictureCounter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 13</value>
+    <value>115, 19</value>
   </data>
   <data name="PictureCounter.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -205,19 +220,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;PictureCounter.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="WaterMarkLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="WaterMarkLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
   </data>
   <data name="WaterMarkLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Disable</value>
   </data>
   <data name="WaterMarkLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>303, 225</value>
+    <value>137, 306</value>
   </data>
   <data name="WaterMarkLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 13</value>
+    <value>85, 19</value>
   </data>
   <data name="WaterMarkLabel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -238,16 +256,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;WaterMarkLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
+  </data>
+  <data name="ApplyWaterMark.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="ApplyWaterMark.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15pt</value>
   </data>
   <data name="ApplyWaterMark.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Disable</value>
   </data>
   <data name="ApplyWaterMark.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 276</value>
+    <value>141, 352</value>
   </data>
   <data name="ApplyWaterMark.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 23</value>
+    <value>249, 46</value>
   </data>
   <data name="ApplyWaterMark.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -265,16 +289,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ApplyWaterMark.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
+  </data>
+  <data name="Reset.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="Reset.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15pt</value>
   </data>
   <data name="Reset.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>Disable</value>
   </data>
   <data name="Reset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 328</value>
+    <value>206, 418</value>
   </data>
   <data name="Reset.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>115, 49</value>
   </data>
   <data name="Reset.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -292,19 +322,76 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Reset.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="HideApp.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="HideApp.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="HideApp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>Disable</value>
+  </data>
+  <data name="HideApp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>838, 21</value>
+  </data>
+  <data name="HideApp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 30</value>
+  </data>
+  <data name="HideApp.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;HideApp.Name" xml:space="preserve">
+    <value>HideApp</value>
+  </data>
+  <data name="&gt;&gt;HideApp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HideApp.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;HideApp.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="CloseApp.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="CloseApp.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="CloseApp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>880, 19</value>
+  </data>
+  <data name="CloseApp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 34</value>
+  </data>
+  <data name="CloseApp.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;CloseApp.Name" xml:space="preserve">
+    <value>CloseApp</value>
+  </data>
+  <data name="&gt;&gt;CloseApp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CloseApp.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;CloseApp.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="ProgressBar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 15pt</value>
+    <value>Nirmala UI, 26.25pt</value>
   </data>
   <data name="ProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>525, 151</value>
+    <value>588, 131</value>
   </data>
   <data name="ProgressBar.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>100, 100</value>
   </data>
   <data name="ProgressBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>254, 254</value>
+    <value>270, 270</value>
   </data>
   <data name="ProgressBar.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -325,7 +412,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ProgressBar.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

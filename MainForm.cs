@@ -31,9 +31,19 @@ namespace WaterMarker
         public MainForm()
         {
             InitializeComponent();
+            var buttons = this.Controls.OfType<Button>();
+
+            foreach (var button in buttons)
+            {
+                button.FlatAppearance.MouseOverBackColor = button.BackColor;
+                button.BackColorChanged += (s, e) =>
+                {
+                    button.FlatAppearance.MouseOverBackColor = button.BackColor;
+                };
+            }
         }
 
-        private void MainForm_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        private void MainForm_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button != MouseButtons.Left) return;
             ReleaseCapture();
@@ -199,6 +209,21 @@ namespace WaterMarker
         private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void WaterMarkLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HideApp_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void CloseApp_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
